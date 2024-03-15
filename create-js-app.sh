@@ -1,4 +1,5 @@
 #!/bin/sh
-python3 /home/shailesh/Desktop/create-js-app/create-js-app
+
+python3 /home/shailesh/js-app
 cd js-app
 live-server

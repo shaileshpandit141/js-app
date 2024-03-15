@@ -10,7 +10,7 @@ list_directory_name = [
 
 
 default_html_templete = (
-'''<!DOCTYPE html>
+    '''<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -39,7 +39,7 @@ default_html_templete = (
 
 
 default_css_styles = (
-'''/* Reset default styles. */
+    '''/* Reset default styles. */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -120,7 +120,7 @@ button {
 
 
 default_js_script = (
-'''// Setting the default document title.
+    '''// Setting the default document title.
 document.title = 'js-app'
 
 // Default html, css, and js code for test 
@@ -170,7 +170,7 @@ const default_test_code = (
     }
 </style>
 <section class="test">
-    <h1>Welcome to <span>create-js-app</span></h1>
+    <h1>Welcome to <span>js-app</span></h1>
     <button id='test--btn--js' type="button">Test</button>
 </section>
 `

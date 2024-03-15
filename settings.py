@@ -93,7 +93,7 @@ html {
 body {
     display: grid;
     background-color: var(--background-color);
-    font-family: 'Roboto', 'Poppins' Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     grid-template-columns: repeat(12, 1fr);
     height: fit-content;
     width: 100%;
@@ -106,7 +106,7 @@ body {
 /* Apply font on input and button tags. */
 input,
 button {
-    font-family: 'Roboto', 'Poppins' Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 

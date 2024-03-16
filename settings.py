@@ -1,3 +1,4 @@
+# Configuration for js-app Directory.
 list_directory_name = [
     'styles',
     'src',
@@ -7,8 +8,10 @@ list_directory_name = [
     'media/images',
 ]
 
+# Default Configuration for js-app.
 default_config = (
-'''const config = {
+'''// Configuration data object.
+const config = {
     title: 'js-app',
 }
 
@@ -18,6 +21,7 @@ document.title = config.title
 '''
 )
 
+# Default Configuration for Document Boilerplate.
 default_html_templete = (
 '''<!DOCTYPE html>
 <html lang="en">
@@ -49,6 +53,7 @@ default_html_templete = (
 </html>
 ''')
 
+# Default Configuration for Styles Boilerplate.
 default_css_styles = (
 '''/* Reset default styles. */
 * {
@@ -128,6 +133,7 @@ button {
 }
 ''')
 
+# Default Configuration for JavaScript Boilerplate.
 default_js_script = (
 '''// Default html, css, and js code for test 
 const default_test_code = (

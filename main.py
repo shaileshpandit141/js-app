@@ -38,10 +38,10 @@ if __name__ == "__main__":
             make_file(f"./{base_dir}/README.md", "## Write your app detailes.")
 
             # Success message.
-            print(f"Successfull created your js-app, name is `{base_dir}`.\n")
+            print(f"Your js-app has been created successfully and its name is `{base_dir}`.\n")
 
             # user input and checking for runn created js-app or not.
-            is_run = input(":: Do you want ot run it with live-server press [y/n]:\n:: ")
+            is_run = input(":: Do you want to run it with live-server then press [y/n]:\n:: ")
             print()
 
             # Checking user input.

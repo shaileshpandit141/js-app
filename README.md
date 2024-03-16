@@ -93,7 +93,7 @@ Files description:
 ## Dependencies
 - Python 3.x
 - Bash shell
-- live-server (install by `npm install -g live-server`)
+- live-server (install by `sudo npm install -g live-server`)
 
 ## Contributing
 Contributions are welcome! Please feel free to submit pull requests or open issues if you encounter any problems or have suggestions for improvements.

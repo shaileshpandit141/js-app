@@ -1,16 +1,25 @@
-base_dir = 'js-app'
-
 list_directory_name = [
     'styles',
     'src',
+    'meta',
     'media',
     'media/icons',
     'media/images',
 ]
 
+default_config = (
+'''const config = {
+    title: 'js-app',
+}
+
+// Setting the default document title.
+document.title = config.title
+
+'''
+)
 
 default_html_templete = (
-    '''<!DOCTYPE html>
+'''<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -30,6 +39,9 @@ default_html_templete = (
 <body>
     <!-- Edit here to update document. -->
 
+    <!-- Linked config script files. -->
+    <script type="module" src="./meta/config.js"></script>
+
     <!-- Linked script files. -->
     <script type="module" src="./src/index.js"></script>
 </body>
@@ -37,15 +49,13 @@ default_html_templete = (
 </html>
 ''')
 
-
 default_css_styles = (
-    '''/* Reset default styles. */
+'''/* Reset default styles. */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
 
 /* CSS Font Size Variables. */
 :root {
@@ -118,12 +128,8 @@ button {
 }
 ''')
 
-
 default_js_script = (
-    '''// Setting the default document title.
-document.title = 'js-app'
-
-// Default html, css, and js code for test 
+'''// Default html, css, and js code for test 
 const default_test_code = (
     `<!-- js-app test code, injected by JavaScript usin src/index.js file. -->
     <style>

@@ -193,7 +193,7 @@ document.body.insertAdjacentHTML('beforeend', default_test_code)
 const testBtnJs = document.getElementById('test--btn--js')
 
 testBtnJs.addEventListener('click', () => {
-    alert('Now js-app is working with live-server, you can change the document then edit index.html or src/index.js file to update the document.')
+    alert('Now js-app is working with live-server, you wnat to change the document element then edit index.html or src/index.js file to update the document.')
 })
 ''')
 

@@ -1,7 +1,10 @@
 from os import system
 from make_file import make_file
+from config import (
+    default_js_config,
+    default_css_config
+)
 from settings import (
-    default_config,
     default_js_app_favicon,
     list_directory_name,
     default_html_templete,
@@ -26,7 +29,8 @@ if __name__ == "__main__":
                 system(f"mkdir ./{base_dir}/{directory_name}")
 
             # Creating default files.
-            make_file(f"./{base_dir}/meta/config.js", default_config)
+            make_file(f"./{base_dir}/meta/css_config.css", default_css_config)
+            make_file(f"./{base_dir}/meta/js_config.js", default_js_config)
             make_file(f"./{base_dir}/media/icons/favicon.svg", default_js_app_favicon)
             make_file(f"./{base_dir}/index.html", default_html_templete)
             make_file(f"./{base_dir}/styles/styles.css", default_css_styles)

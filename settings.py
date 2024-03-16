@@ -8,19 +8,6 @@ list_directory_name = [
     'media/images',
 ]
 
-# Default Configuration for js-app.
-default_config = (
-    '''// Configuration data object.
-const config = {
-    title: 'js-app',
-}
-
-// Setting the default document title.
-document.title = config.title
-
-'''
-)
-
 # Default Configuration for Document Boilerplate.
 default_html_templete = (
     '''<!DOCTYPE html>
@@ -36,6 +23,9 @@ default_html_templete = (
     <!-- Default document title. -->
     <title>Document</title>
 
+    <!-- Linked config style file. -->
+    <link rel="stylesheet" href="./meta/css_config.css">
+
     <!-- Linked stylesheet files. -->
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
@@ -43,26 +33,19 @@ default_html_templete = (
 <body>
     <!-- Edit here to update document. -->
 
-    <!-- Linked config script files. -->
-    <script type="module" src="./meta/config.js"></script>
+    <!-- Linked config JavaScript file. -->
+    <script type="module" src="./meta/js_config.js"></script>
 
-    <!-- Linked script files. -->
+    <!-- Linked JavaScript files. -->
     <script type="module" src="./src/index.js"></script>
 </body>
 
 </html>
 ''')
 
-# Default Configuration for Styles Boilerplate.
+# Default Styles for user.
 default_css_styles = (
-    '''/* Reset default styles. */
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-/* CSS Font Size Variables. */
+    '''/* CSS Font Size Variables. */
 :root {
     
     /* For Display Text  */
@@ -97,18 +80,10 @@ default_css_styles = (
     --hover-color: unset;
 }
 
-
-/* Setting scroll-behavior. */
-html {
-    scroll-behavior: smooth;
-}
-
-
 /* Body styles. */
 body {
     display: grid;
     background-color: var(--background-color);
-    font-family: Arial, Helvetica, sans-serif;
     grid-template-columns: repeat(12, 1fr);
     height: fit-content;
     width: 100%;
@@ -117,23 +92,17 @@ body {
     overflow-y: auto;
 }
 
-
-/* Apply font on input and button tags. */
-input,
-button {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
 /* Protect Link OverFlow during Click.  */
 .protect--link--overflow {
     display: flex;
     overflow: hidden;
     width: fit-content;
 }
+
+/* Write your style here.-------------- */
 ''')
 
-# Default Configuration for JavaScript Boilerplate.
+# Default js-app test script.
 default_js_script = (
     '''// Default html, css, and js code for test 
 const default_test_code = (
@@ -157,13 +126,32 @@ const default_test_code = (
         text-align: center;
         letter-spacing: 0.03em;
         line-height: 24px;
+    }
+    
+    p {
         margin-block: 16px;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        line-height: 1.5;
+        text-align: center;
+        width: 100%;
+        min-width: 0;
+        max-width: 450px;
     }
 
     span {
         text-wrap: nowrap;
         letter-spacing: 0.03em;
         color: #7f02ad;
+    }
+
+    .counter {
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 999rem;
+        margin-bottom: 8px;
     }
 
     button {
@@ -174,29 +162,46 @@ const default_test_code = (
     padding: 8px 16px;
     border-radius: 999rem;
     background-color: #e7e7e7;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out. outline 0.3s ease-in-out;
     }
 
     button:hover {
         background-color: #dadada;
+        outline: 3.5px solid #7f02ad57;
     }
 </style>
 <section class="test">
     <h1>Welcome to <span>js-app</span></h1>
-    <button id='test--btn--js' type="button">Test</button>
+    <p>
+        Now that the js-app is running with live-server, if you want to change
+        the document element, please edit the index.html or src/index.js
+        file to update the document.
+    </p>
+    <h1 class="counter"><span class="counter-js">00</span></h1>
+    <button id='test-btn-js' type="button">Increment</button>
 </section>
 `
 )
 
 document.body.insertAdjacentHTML('beforeend', default_test_code)
 
-const testBtnJs = document.getElementById('test--btn--js')
+const counter = document.querySelector(".counter-js")
+const testBtn = document.getElementById('test-btn-js')
+let defaultCounterState = 1
 
-testBtnJs.addEventListener('click', () => {
-    alert('Now that the js-app is running with live-server, if you want to change the document element, please edit the index.html or src/index.js file to update the document.')
+testBtn.addEventListener('click', () => {
+    if (defaultCounterState < 10) {
+        let temp = `0${defaultCounterState}`
+        counter.innerHTML = temp
+        defaultCounterState += 1
+    } else {
+        counter.innerHTML = defaultCounterState
+        defaultCounterState += 1
+    }
 })
 ''')
 
+# Default js-app favicon.
 default_js_app_favicon = (
     '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630">
 <rect width="630" height="630" fill="#f7df1e"/>

@@ -31,7 +31,9 @@ default_html_templete = (
 </head>
 
 <body>
+    <!-- ----------------------------------------- -->
     <!-- Edit here to update document. -->
+    <!-- ----------------------------------------- -->
 
     <!-- Linked config JavaScript file. -->
     <script type="module" src="./meta/js_config.js"></script>
@@ -106,7 +108,7 @@ body {
 default_js_script = (
     '''// Default html, css, and js code for test 
 const default_test_code = (
-    `<!-- js-app test code, injected by JavaScript usin src/index.js file. -->
+    `<!-- js-app test code, injected by JavaScript using src/index.js file. -->
     <style>
     .test {
         grid-column: 2/-2;

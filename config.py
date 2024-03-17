@@ -1,5 +1,5 @@
 # Default Configuration for js-app.
-default_js_config = (
+default_config_script = (
     '''// Configure meta data object.
 const config = {
     title: 'js-app',
@@ -12,7 +12,7 @@ document.title = config.title
 )
 
 # Default Styles for document.
-default_css_config = (
+default_config_styles = (
     '''/* Reset default styles. */
 * {
     box-sizing: border-box;

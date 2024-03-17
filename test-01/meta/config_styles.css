@@ -1,19 +1,4 @@
-# Default Configuration for app.
-default_config_script = (
-    '''// Configure meta data object.
-const config = {
-    title: 'JS-CLI',
-}
-
-// Setting the default document title.
-document.title = config.title
-
-'''
-)
-
-# Default Styles for document.
-default_config_styles = (
-    '''/* Reset default styles. */
+/* Reset default styles. */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -40,5 +25,3 @@ input,
 button {
     font-family: Arial, Helvetica, sans-serif;
 }
-'''
-)
